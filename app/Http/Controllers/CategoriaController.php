@@ -29,10 +29,22 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
+
+        $messages = [
+            'nome.required' => 'O nome é um campo obrigatório!',
+        ];
+
+        $validated = $request->validate([
+            'nome' => 'required|min:5',
+        ], $messages);
+
+
        // dd($request->all());
         $categoria = new Categoria();
         $categoria->nome = $request->nome;
         $categoria->save();
+
+        return redirect()->route('categoria.index')->with('message', 'categoria cadastrada com sucesso!');
     }
 
     /**
@@ -49,7 +61,8 @@ class CategoriaController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $categoria = Categoria::find($id);
+        return view('categoria.categoria_edit', compact('categoria'));
     }
 
     /**
@@ -57,7 +70,19 @@ class CategoriaController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $messages = [
+            'nome.required' => 'O nome é um campo obrigatório!',
+        ];
+
+        $validated = $request->validate([
+            'nome' => 'required|min:5',
+        ], $messages);
+
+        $categoria = Categoria::find($id);
+        $categoria->nome = $request->nome;
+        $categoria->save();
+
+        return redirect()->route('categoria.index')->with('message', 'categoria atualizada com sucesso!');
     }
 
     /**
@@ -65,6 +90,10 @@ class CategoriaController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $categoria = Categoria::find($id);
+        $categoria->delete();
+
+        return redirect()->route('categoria.index')->with('message', 'categoria excluída com sucesso!');
+
     }
 }

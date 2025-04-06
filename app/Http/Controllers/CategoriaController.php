@@ -21,7 +21,7 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        //
+        return view('categoria.categoria_create');
     }
 
     /**
@@ -29,7 +29,10 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       // dd($request->all());
+        $categoria = new Categoria();
+        $categoria->nome = $request->nome;
+        $categoria->save();
     }
 
     /**
@@ -37,7 +40,8 @@ class CategoriaController extends Controller
      */
     public function show(string $id)
     {
-        //
+       $categoria = Categoria::find($id);
+       return view('categoria.categoria_show', compact('categoria'));
     }
 
     /**

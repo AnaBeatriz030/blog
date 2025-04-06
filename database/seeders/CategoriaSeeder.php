@@ -15,15 +15,18 @@ class CategoriaSeeder extends Seeder
     {
         DB::table('categorias')->insert([
             'nome' => 'sapato',
-
+            'created_at' => now(),
+            'created_at' => now()
         ]);
         DB::table('categorias')->insert([
             'nome' => 'meia',
-
+            'created_at' => now(),
+            'created_at' => now()
         ]);
         DB::table('categorias')->insert([
             'nome' => 'tenis',
-
+            'created_at' => now(),
+            'created_at' => now()
         ]);
     }
 }

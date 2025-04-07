@@ -22,7 +22,7 @@
                        @csrf
 
                        <label>Nome:</label>
-                       <input type="text" name="nome" value="{{ $categoria->nome }}" class="form-control">
+                       <input type="text" name="nome" value="{{ $categoria->nome }}"class="form-control">
 
                        <button type="submit" class="btn btn-primary">ENVIAR</button>
 

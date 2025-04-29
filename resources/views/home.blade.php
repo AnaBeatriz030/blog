@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    {{ __('biao trem do odio!') }}
+                    {{ __('OLá!') }}
                 </div>
             </div>
         </div>

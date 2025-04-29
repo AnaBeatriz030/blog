@@ -12,6 +12,7 @@
                     <p><strong>Id: </strong>{{ $postagem->id }}</p>
                     <p><strong>Categoria: </strong>{{ $postagem->categoria->nome }}</p>
                     <p><strong>Titulo: </strong>{{ $postagem->titulo }}</p>
+                    <p><strong>Descriçao: </strong>{!! $postagem->descricao !!}</p>
                     <p><strong>criação: </strong>{{ $postagem->created_at }}</p>
                     <p><strong>atualização: </strong>{{ $postagem->updated_at }}</p>
 

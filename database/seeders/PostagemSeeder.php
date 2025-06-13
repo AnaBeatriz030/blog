@@ -69,7 +69,7 @@ class PostagemSeeder extends Seeder
 
         DB::table('postagens')->insert([
             'categoria_id' => 1,
-            'user_id' => 2,
+            'user_id' => 1,
             'titulo' => 'Postagem 7',
             'descricao' => 'Descricao da postagem 7',
             'created_at' => now(),
@@ -78,7 +78,7 @@ class PostagemSeeder extends Seeder
 
         DB::table('postagens')->insert([
             'categoria_id' => 2,
-            'user_id' => 2,
+            'user_id' => 1,
             'titulo' => 'Postagem 8',
             'descricao' => 'Descricao da postagem 8',
             'created_at' => now(),
@@ -87,7 +87,7 @@ class PostagemSeeder extends Seeder
 
         DB::table('postagens')->insert([
             'categoria_id' => 3,
-            'user_id' => 2,
+            'user_id' => 1,
             'titulo' => 'Postagem 9',
             'descricao' => 'Descricao da postagem 9',
             'created_at' => now(),
@@ -96,7 +96,7 @@ class PostagemSeeder extends Seeder
 
         DB::table('postagens')->insert([
             'categoria_id' => 1,
-            'user_id' => 2,
+            'user_id' => 1,
             'titulo' => 'Postagem 10',
             'descricao' => 'Descricao da postagem 10',
             'created_at' => now(),
@@ -105,7 +105,7 @@ class PostagemSeeder extends Seeder
 
         DB::table('postagens')->insert([
             'categoria_id' => 2,
-            'user_id' => 2,
+            'user_id' => 1,
             'titulo' => 'Postagem 11',
             'descricao' => 'Descricao da postagem 11',
             'created_at' => now(),
@@ -114,7 +114,7 @@ class PostagemSeeder extends Seeder
 
         DB::table('postagens')->insert([
             'categoria_id' => 3,
-            'user_id' => 2,
+            'user_id' => 1,
             'titulo' => 'Postagem 12',
             'descricao' => 'Descricao da postagem 12',
             'created_at' => now(),
